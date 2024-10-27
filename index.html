@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiara Monahan - Data Science Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="sidebar">
+    <img src="images/headshot.jpeg" alt="Profile Photo" class="profile-photo">
+    <h1>Kiara Monahan</h1>
+	<h2 class="title">Data Scientist and Analyst</h2>
+	  <div class="location">
+	    <span class="location-icon">📍</span>
+	    <span class="location-text">San Francisco</span>
+	  </div>
+    <p class="description">I am a data scientist with a background in biomedical research, public health, and community outreach. I am about to finish my Master in Information and Data Science at UC Berkeley, and this portfolio showcases some of the projects I've worked on in the program, for work, and for fun.</p>
+    <div class="links">
+      <a href="https://github.com/your-github" target="_blank"><img src="icons/github-icon.png" alt="GitHub" class="icon"></a>
+      <a href="https://www.linkedin.com/in/kiaramonahan/" target="_blank"><img src="icons/linkedin-icon.png" alt="LinkedIn" class="icon"></a>
+    </div>
+  </div>
+  
+  <div class="main">
+    <nav>
+      <a href="#projects" class="nav-item active">Projects</a>
+      <a href="#about" class="nav-item">About Me</a>
+      <a href="#resume" class="nav-item">Resume</a>
+    </nav>
+
+    <section id="projects">
+      <div class="filter">
+        <p class="filter-description">Filter projects by skill or data type:</p>
+        <div class="skill-tags">
+          <span class="filter-skill">Python</span>
+          <span class="filter-skill">SQL</span>
+          <span class="filter-skill">R</span>
+		  <span class="filter-skill">data wrangling</span>
+		  <span class="filter-skill">data analysis</span>
+		  <span class="filter-skill">data modeling</span>
+		  <span class="filter-skill">data visualization</span>
+		  <span class="filter-skill">machine learning</span>
+		  <span class="filter-skill">Tableau</span>
+		  <span class="filter-skill">Excel</span>
+		  <span class="filter-skill">distributed frameworks</span>
+		  <span class="filter-skill">natural language processing</span>
+		  <span class="filter-skill">BERT</span>
+		  <span class="filter-skill">clinical data</span>
+		  <span class="filter-skill">big data</span>
+        </div>
+      </div>
+
+      <div class="project-list">
+        <div class="project-card" data-skill="Python, data wrangling, data analysis, data visualization, machine learning">
+          <img src="images/coralsense.png" alt="Project Image">
+          <h2>CoralSense</h2>
+          <p>This project aims to predict future coral reef health globally using machine learning and time series models with the goal to aid conservationists, governments, and raise public awareness. Researched and integrated over 6 environmental, socio-economic, and geospatial datasets, including satellite imagery, utilizing SQL, GeoPandas, and Pandas in Python. Developed a map interface with JavaScript and HTML to display model predictions, and used React for back-end website creation. Employed AWS for both model training and website hosting.</p>
+          <button class="view-more" data-project="coralsense">View More</button>
+          <div class="project-skills">
+            <span>Python</span>
+            <span>data wrangling</span>
+			<span>data analysis</span>
+			<span>data visualization</span>
+			<span>machine learning</span>
+          </div>
+        </div>
+		
+        <div class="project-card" data-skill="natural language processing, BERT, machine learning, clinical data">
+          <img src="images/med-abbrev-mystery.png" alt="Project Image">
+          <h2>Med-Abrev-Mystery</h2>
+          <p>Developed a novel BERT-based model structure that extracts and pools hidden state embeddings from specific abbreviation locations within clinical text. Fine-tuned BERT models (Base BERT Cased and MS BERT) on the MeDAL dataset, which contains over 5,800 medical abbreviations and their expansions, to disambiguate abbreviations in Electronic Health Records (EHRs). Applied the fine-tuned models to mortality and diagnosis prediction tasks using the MIMIC-III dataset. Results demonstrated modest performance improvements, showcasing the potential for further exploration of BERT fine-tuning in clinical NLP applications.</p>
+          <button class="view-more" data-project="med-abbrev-mystery">View More</button>
+          <div class="project-skills">
+            <span>Python</span>
+            <span>machine learning</span>
+			<span>natural language processing</span>
+			<span>BERT</span>
+			<span>clinical data</span>
+          </div>
+        </div>
+		
+        <div class="project-card" data-skill="Python, distributed frameworks, big data, data wrangling, machine learning, data modeling">
+          <img src="images/flightdelays.png" alt="Project Image">
+          <h2>Predicting Flight Delays for Consumers</h2>
+          <p>Developed time series predictive pipelines using large datasets and distributed frameworks on the Databricks platform to enhance airline customer experience by forecasting flight delays with U.S. Department of Transportation and NOAA data. Highly predictive new features were created, including a PageRank feature. The project employed grid searches to optimize logistic regression and neural network models in PySpark.</p>
+          <button class="view-more" data-project="flight_delays">View More</button>
+          <div class="project-skills">
+            <span>Python</span>
+            <span>distributed frameworks</span>
+			<span>data wrangling</span>
+			<span>machine learning</span>
+			<span>data modeling</span>
+			<span>big data</span>
+			
+          </div>
+        </div>
+		
+        <div class="project-card" data-skill="Excel, data wrangling, data analysis, data visualization, clinical data">
+          <img src="images/CFTR_diagram.png" alt="Project Image">
+          <h2>Cystic Fibrosis Theratyping: Matching Mutations to Medications</h2>
+          <p>Although this is a biomedical research project, it highlights my project management skills as I planned and conducted the project from start to finish. In addition, most of my time on this project was spent analyzing and visualizing data. The goal of this project was to match cystic fibrosis patients with rare mutations to effective medications by "testing out" CFTR modulators on cultures of the patients' tissue samples. This was a part of my work at the UCSF Children's Hospital Oakland Research Institute.</p>
+          <button class="view-more" data-project="cystic_fibrosis" data-pdf="files/cystic_fibrosis.pdf">View More</button>
+          <div class="project-skills">
+            <span>Excel</span>
+            <span>data wrangling</span>
+			<span>data analysis</span>
+			<span>data visualization</span>
+			<span>clinical data</span>
+          </div>
+        </div>
+		
+        <div class="project-card" data-skill="Tableau, data wrangling, data visualization">
+          <img src="images/olympics.png" alt="Project Image">
+          <h2>2024 Paris Olympics: Do medal counts tell the whole story?</h2>
+          <p>As I watched the Olympics this year, I couldn't help but notice that the country medal charts always have large, wealthy countries in the lead. Out of my own curiosity, I created a visual that walks you through more than the simple country rankings.</p>
+          <button class="view-more" data-project="olympics">View More</button>
+          <div class="project-skills">
+            <span>Tableau</span>
+            <span>data wrangling</span>
+			<span>data visualization</span>
+          </div>
+        </div>
+		
+      </div>
+    </section>
+  </div>
+
+  <!-- Single Modal Structure -->
+  <div class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="zoom-controls" style="display: none;">
+        <button id="zoom-in">+</button>
+        <button id="zoom-out">-</button>
+      </div>
+      <div id="modal-body">
+        <!-- Content will be added dynamically by JavaScript -->
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

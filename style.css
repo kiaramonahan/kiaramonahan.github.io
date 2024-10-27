@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; /* Set sidebar width */
+  height: 100vh; /* Full viewport height */
+  background-color: #ffffff; /* White background */
+  color: #000;
+  padding: 20px;
+  border-right: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  overflow-y: auto; /* Sidebar scrolls if content exceeds height */
+  z-index: 10; /* Keep it above other content */
+}
+
+
+.main {
+  margin-left: 250px; /* Leave space for the sidebar */
+  padding-top: 80px; /* Leave space for the fixed navbar */
+  padding: 20px;
+  background-color: #f9f9f9;
+  overflow: auto;
+  min-height: 100vh; /* Ensure main content area takes full height */
+}
+
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.sidebar h1,
+.sidebar h2,
+.sidebar .location,
+.sidebar p {
+  margin-left: 0; /* Ensure left alignment without extra margins */
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.links a {
+  display: inline-block;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 300; /* Lighter font weight */
+  color: #666; /* Light grey color */
+  margin-bottom: 10px;
+}
+
+.location {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.location-icon {
+  margin-right: 5px;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 300; /* Lighter font for less heavy look */
+  line-height: 1.5;
+  align-items: left;
+  justify-content: left;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.sidebar h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.sidebar p {
+  font-size: 16px;
+  margin-top: 10px; /* Adds space above the description */
+  color: #000; /* Optional: Ensure text is black */
+}
+
+.profile-photo {
+	width: 125px;
+	height: 125px;
+	border-radius: 50%;
+	margin-top: 50px; /* Moves the photo down */
+	margin-bottom: 15px;
+}
+
+.links a {
+  display: inline-block;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.links .icon {
+  width: 40px; /* Smaller icon size */
+  height: 40px;
+  margin: 5px;
+  transition: transform 0.3s;
+}
+
+.links .icon:hover {
+  transform: scale(1.1);
+}
+
+.links a:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* Navbar styling - fixed position */
+nav {
+  position: fixed;
+  top: 0;
+  left: 250px; /* Aligns navbar with the right edge of the sidebar */
+  right: 0;
+  height: 60px; /* Adjust height as needed */
+  background-color: #ffffff;
+  padding: 0 20px; /* Horizontal padding only */
+  display: flex;
+  align-items: center; /* Vertically centers content */
+  gap: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 10;
+  box-sizing: border-box;
+  justify-content: flex-start; /* Aligns items to the left by default */
+}
+
+
+.nav-item {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-item:hover {
+  background-color: #e0e4e4;
+  color: #000;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  background-color: #0073e6; /* Highlight color */
+  color: white;
+}
+
+.filter {
+  padding: 20px;
+  background-color: #ffffff;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-description {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-skill {
+  background-color: #e8f0f8;
+  color: #0073e6;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-skill:hover {
+  background-color: #d0e7ff;
+}
+
+.filter-skill.selected {
+  background-color: #0073e6; /* New background color for selected skill */
+  color: white; /* Text color for better contrast when selected */
+}
+
+/* Project cards container */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible columns */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Fine-tune for specific breakpoints */
+@media (min-width: 768px) {
+  .project-list {
+    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2 columns on smaller screens */
+  }
+}
+
+@media (min-width: 1300px) {
+  .project-list {
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); /* 3 columns for medium screens */
+  }
+}
+
+/* Larger breakpoint for 4 columns */
+@media (min-width: 2000px) {
+  .project-list {
+    grid-template-columns: repeat(4, minmax(250px, 1fr)); /* 4 columns only on wider screens */
+  }
+}
+
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  position: relative;
+  color: #666;
+}
+
+.project-card img {
+  width: 100%; /* Ensures image takes full width of container */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures image fills the container, cropping if necessary */
+  aspect-ratio: 4 / 2; /* Sets a 4:3 aspect ratio */
+  border-radius: 8px; /* Optional: rounds image corners for a cleaner look */
+  margin-bottom: 10px;
+}
+
+.project-card h2 {
+  color: #333; /* Slightly darker for emphasis on titles */
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666; /* Light gray for less emphasis on descriptions */
+}
+
+
+.project-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.project-skills span {
+  background-color: #e8f0f8;
+  color: #0073e6;
+  border-radius: 10px;
+  padding: 2px 8px;
+}
+
+.view-more {
+  background-color: #0073e6;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.view-more:hover {
+  background-color: #005bb5;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 80%; /* Default width for most content */
+  max-width: 1064px;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.modal-content.pdf-viewer {
+  width: 90%; /* Wider width for PDF content */
+  max-width: 1600px; /* Allows more horizontal space for large PDFs */
+}
+
+.modal-content h2{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.modal-content img {
+  max-width: 100%; /* Ensures image does not exceed modal width */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 400px; /* Limits the height to prevent oversized images */
+  display: block;
+  margin: 0 auto; /* Center-aligns the image */
+}
+
+.modal-content.tableau-visual {
+  width: 1024px; /* Set the width to the Tableau visualization's true width */
+  height: 3500px; /* Adjust height to match the Tableau visualization */
+  max-width: 80%; /* Ensures responsiveness */
+  max-height: 90vh; /* Limit to viewport height */
+  padding: 0;
+  box-sizing: border-box;
+  overflow: auto; /* Allows scrolling if visualization is larger than modal */
+}
+
+.zoom-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.zoom-controls button {
+  font-size: 20px;
+  padding: 5px 10px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.zoom-controls button:hover {
+  background-color: #005bb5;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  z-index: 10; /* Ensure it’s above other content */
+}
