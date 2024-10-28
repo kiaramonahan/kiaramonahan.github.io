@@ -7,8 +7,8 @@
 
 body {
   display: flex;
-  min-height: 100vh; /* Full viewport height */
-  margin: 0; /* Remove default margin */
+  min-height: 100vh; 
+  margin: 0; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
@@ -16,42 +16,34 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px; /* Set sidebar width */
-  height: 100vh; /* Full viewport height */
-  background-color: #ffffff; /* White background */
+  width: 250px; 
+  height: 100vh; 
+  background-color: #ffffff; 
   color: #000;
   padding: 20px;
   border-right: 1px solid #e0e0e0;
   box-sizing: border-box;
-  overflow-y: auto; /* Sidebar scrolls if content exceeds height */
-  z-index: 10; /* Keep it above other content */
+  overflow-y: auto; 
+  z-index: 10; 
 }
 
 
 .main {
   flex: 1;
-  margin-left: 250px; /* Leave space for the sidebar */
-  padding-top: 80px; /* Leave space for the fixed navbar */
+  margin-left: 250px; 
+  padding-top: 80px; 
   padding: 0px;
   background-color: #f9f9f9;
   overflow: auto;
-  min-height: 100vh; /* Ensure main content area takes full height */
+  min-height: 100vh; 
 }
 
-
-.profile-photo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-top: 20px;
-  margin-bottom: 15px;
-}
 
 .sidebar h1,
 .sidebar h2,
 .sidebar .location,
 .sidebar p {
-  margin-left: 0; /* Ensure left alignment without extra margins */
+  margin-left: 0; 
 }
 
 .links {
@@ -66,8 +58,8 @@ body {
 
 .title {
   font-size: 20px;
-  font-weight: 300; /* Lighter font weight */
-  color: #666; /* Light grey color */
+  font-weight: 300; 
+  color: #666;
   margin-bottom: 10px;
 }
 
@@ -86,7 +78,7 @@ body {
 
 .description {
   font-size: 14px;
-  font-weight: 300; /* Lighter font for less heavy look */
+  font-weight: 300;
   line-height: 1.5;
   align-items: left;
   justify-content: left;
@@ -103,15 +95,15 @@ body {
 
 .sidebar p {
   font-size: 16px;
-  margin-top: 10px; /* Adds space above the description */
-  color: #000; /* Optional: Ensure text is black */
+  margin-top: 10px; 
+  color: #000; 
 }
 
 .profile-photo {
 	width: 125px;
 	height: 125px;
 	border-radius: 50%;
-	margin-top: 50px; /* Moves the photo down */
+	margin-top: 10px; 
 	margin-bottom: 15px;
 }
 
@@ -122,7 +114,7 @@ body {
 }
 
 .links .icon {
-  width: 40px; /* Smaller icon size */
+  width: 40px; 
   height: 40px;
   margin: 5px;
   transition: transform 0.3s;
@@ -138,22 +130,22 @@ body {
 
 
 
-/* Navbar styling - fixed position */
+/* Navbar*/
 nav {
   position: fixed;
   top: 0;
-  left: 250px; /* Aligns navbar with the right edge of the sidebar */
+  left: 250px; /* Aligning navbar with edge of the sidebar */
   right: 0;
-  height: 60px; /* Adjust height as needed */
+  height: 60px; 
   background-color: #ffffff;
-  padding: 0 20px; /* Horizontal padding only */
+  padding: 0 20px; 
   display: flex;
-  align-items: center; /* Vertically centers content */
+  align-items: center; 
   gap: 20px;
   border-bottom: 1px solid #e0e0e0;
   z-index: 10;
   box-sizing: border-box;
-  justify-content: flex-start; /* Aligns items to the left by default */
+  justify-content: flex-start; 
 }
 
 
@@ -172,7 +164,7 @@ nav {
 }
 
 .nav-item.active {
-  background-color: #0073e6; /* Highlight color */
+  background-color: #0073e6; 
   color: white;
 }
 
@@ -213,14 +205,14 @@ nav {
 }
 
 .filter-skill.selected {
-  background-color: #0073e6; /* New background color for selected skill */
-  color: white; /* Text color for better contrast when selected */
+  background-color: #0073e6; 
+  color: white; 
 }
 
 /* Project cards container */
 .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible columns */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 20px; /* Space between cards */
   padding: 20px;
   box-sizing: border-box;
@@ -229,20 +221,20 @@ nav {
 /* Fine-tune for specific breakpoints */
 @media (min-width: 768px) {
   .project-list {
-    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2 columns on smaller screens */
+    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2 columns*/
   }
 }
 
 @media (min-width: 1300px) {
   .project-list {
-    grid-template-columns: repeat(3, minmax(250px, 1fr)); /* 3 columns for medium screens */
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); /* 3 columns */
   }
 }
 
 /* Larger breakpoint for 4 columns */
 @media (min-width: 2000px) {
   .project-list {
-    grid-template-columns: repeat(4, minmax(250px, 1fr)); /* 4 columns only on wider screens */
+    grid-template-columns: repeat(4, minmax(250px, 1fr)); /* 4 columns*/
   }
 }
 
@@ -259,16 +251,16 @@ nav {
 }
 
 .project-card img {
-  width: 100%; /* Ensures image takes full width of container */
-  height: auto; /* Maintains aspect ratio */
-  object-fit: cover; /* Ensures image fills the container, cropping if necessary */
-  aspect-ratio: 4 / 2; /* Sets a 4:3 aspect ratio */
-  border-radius: 8px; /* Optional: rounds image corners for a cleaner look */
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  aspect-ratio: 4 / 2; 
+  border-radius: 8px; 
   margin-bottom: 10px;
 }
 
 .project-card h2 {
-  color: #333; /* Slightly darker for emphasis on titles */
+  color: #333; 
   font-size: 22px;
   margin-bottom: 8px;
 }
@@ -276,7 +268,7 @@ nav {
 .project-card p {
   font-size: 14px;
   line-height: 1.6;
-  color: #666; /* Light gray for less emphasis on descriptions */
+  color: #666; 
 }
 
 
@@ -332,15 +324,15 @@ nav {
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
-  width: 80%; /* Default width for most content */
+  width: 80%; 
   max-width: 1500px;
   max-height: 90vh;
   overflow: auto;
 }
 
 .modal-content.pdf-viewer {
-  width: 90%; /* Wider width for PDF content */
-  max-width: 1600px; /* Allows more horizontal space for large PDFs */
+  width: 90%; 
+  max-width: 1600px; 
 }
 
 .modal-content h2{
@@ -350,21 +342,20 @@ nav {
 }
 
 .modal-content img {
-  max-width: 100%; /* Ensures image does not exceed modal width */
-  height: auto; /* Maintains aspect ratio */
-  max-height: 400px; /* Limits the height to prevent oversized images */
+  max-width: 100%; 
+  height: auto; 
+  max-height: 400px; 
   display: block;
-  margin: 0 auto; /* Center-aligns the image */
+  margin: 0 auto; 
 }
 
 .modal-content.tableau-visual {
-  width: 1024px; /* Set the width to the Tableau visualization's true width */
-  height: 3500px; /* Adjust height to match the Tableau visualization */
-  max-width: 80%; /* Ensures responsiveness */
-  max-height: 90vh; /* Limit to viewport height */
+  width: 1024px; 
+  max-height: 3500px; 
+  max-width: 80%; 
   padding: 0;
   box-sizing: border-box;
-  overflow: auto; /* Allows scrolling if visualization is larger than modal */
+  overflow: auto; 
 }
 
 .zoom-controls {
@@ -388,32 +379,88 @@ nav {
   background-color: #005bb5;
 }
 
-/* Styles for the About Me container */
 .about-container {
-  background-color: #ffffff; /* White background */
+  background-color: #ffffff; 
   margin-top: 80px;
   margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  border-radius: 8px; /* Rounded corners */
-  padding: 30px; /* Padding inside the container */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  text-align: center; /* Centers the text */
-  color: #333; /* Darker color for readability */
+  border-radius: 8px; 
+  padding: 30px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
+  color: #333; 
   
 }
 
 .about-container h2 {
-  font-size: 24px; /* Header size */
-  margin-bottom: 20px; /* Space below the header */
-  color: #0073e6; /* Optional: custom color for the header */
+  font-size: 24px; 
+  margin-bottom: 20px; 
+  color: #0073e6; 
 }
 
 .about-container p {
-  font-size: 16px; /* Text size */
-  line-height: 1.6; /* Improves readability */
+  font-size: 16px; 
+  line-height: 1.6; 
 }
 
+/* Resume Container with Similar Styling to About Section */
+.resume-container {
+  background-color: #ffffff; 
+  margin-top: 80px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 8px; 
+  padding: 30px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  text-align: left; /* Aligns all text to the left */
+  color: #333;
+  
+}
+
+/* Heading Styles for Resume Sections (e.g., Education, Experience) */
+.resume-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0073e6;
+  text-align: center; /* Centers the section headings */
+  border-bottom: 2px solid #e0e0e0; /* Optional: subtle border under headings */
+  padding-bottom: 5px;
+}
+
+/* Subheading for Items within Each Section (e.g., Job Title, Degree) */
+.resume-container h3 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Paragraph Styling for Descriptions */
+.resume-container p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.resume-container ul {
+  margin: 10px 0 20px 20px; /* Space above, below, and indentation */
+  padding: 0; /* Removes default padding */
+  list-style-type: disc; /* Standard bullet points */
+}
+
+.resume-container ul li {
+  font-size: 16px;
+  line-height: 1.6; /* Spacing between lines for readability */
+  color: #666;
+  margin-bottom: 8px; /* Space between each bullet point */
+}
+
+/* Optional: Section Spacing */
+.resume-section {
+  margin-bottom: 25px; /* Adds spacing between each resume section */
+}
 
 .close {
   position: absolute;
@@ -422,5 +469,5 @@ nav {
   font-size: 24px;
   color: #333;
   cursor: pointer;
-  z-index: 10; /* Ensure it’s above other content */
+  z-index: 10; 
 }
