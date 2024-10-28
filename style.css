@@ -29,9 +29,10 @@ body {
 
 
 .main {
+  flex: 1;
   margin-left: 250px; /* Leave space for the sidebar */
   padding-top: 80px; /* Leave space for the fixed navbar */
-  padding: 20px;
+  padding: 0px;
   background-color: #f9f9f9;
   overflow: auto;
   min-height: 100vh; /* Ensure main content area takes full height */
@@ -332,7 +333,7 @@ nav {
   background-color: #fff;
   border-radius: 8px;
   width: 80%; /* Default width for most content */
-  max-width: 1064px;
+  max-width: 1500px;
   max-height: 90vh;
   overflow: auto;
 }
@@ -386,6 +387,33 @@ nav {
 .zoom-controls button:hover {
   background-color: #005bb5;
 }
+
+/* Styles for the About Me container */
+.about-container {
+  background-color: #ffffff; /* White background */
+  margin-top: 80px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 8px; /* Rounded corners */
+  padding: 30px; /* Padding inside the container */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  text-align: center; /* Centers the text */
+  color: #333; /* Darker color for readability */
+  
+}
+
+.about-container h2 {
+  font-size: 24px; /* Header size */
+  margin-bottom: 20px; /* Space below the header */
+  color: #0073e6; /* Optional: custom color for the header */
+}
+
+.about-container p {
+  font-size: 16px; /* Text size */
+  line-height: 1.6; /* Improves readability */
+}
+
 
 .close {
   position: absolute;
