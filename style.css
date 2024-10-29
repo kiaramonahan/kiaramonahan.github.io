@@ -317,7 +317,7 @@ nav {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  overflow: hidden; /* Prevents any scrollbars in the background */
+  overflow: hidden; 
 }
 
 .modal-content {
@@ -328,6 +328,8 @@ nav {
   width: 80%; 
   max-width: 1100px;
   max-height: 90vh;
+  justify-content: left;
+  align-items: left;
   overflow: auto;
 }
 
@@ -347,7 +349,22 @@ nav {
   height: auto; 
   max-height: 400px; 
   display: block;
+  align-items: left;
+  justify-content: left;
   margin: 0 auto; 
+}
+
+.modal-content.report-visual {
+  width: 90%;
+  max-width: 1200px; 
+  height: 85vh;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content.tableau-visual {
@@ -411,7 +428,6 @@ nav {
   text-align: left; 
 }
 
-/* Resume Container with Similar Styling to About Section */
 .resume-container {
   background-color: #ffffff; 
   margin-top: 80px;
@@ -421,22 +437,20 @@ nav {
   border-radius: 8px; 
   padding: 30px; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  text-align: left; /* Aligns all text to the left */
+  text-align: left; 
   color: #333;
   
 }
 
-/* Heading Styles for Resume Sections (e.g., Education, Experience) */
 .resume-container h2 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #0073e6;
-  text-align: center; /* Centers the section headings */
-  border-bottom: 2px solid #e0e0e0; /* Optional: subtle border under headings */
+  text-align: center; 
+  border-bottom: 2px solid #e0e0e0; 
   padding-bottom: 5px;
 }
 
-/* Subheading for Items within Each Section (e.g., Job Title, Degree) */
 .resume-container h3 {
   font-size: 20px;
   color: #333;
@@ -444,7 +458,6 @@ nav {
   font-weight: bold;
 }
 
-/* Paragraph Styling for Descriptions */
 .resume-container p {
   font-size: 16px;
   line-height: 1.6;
@@ -452,21 +465,20 @@ nav {
 }
 
 .resume-container ul {
-  margin: 10px 0 20px 20px; /* Space above, below, and indentation */
-  padding: 0; /* Removes default padding */
-  list-style-type: disc; /* Standard bullet points */
+  margin: 10px 0 20px 20px; 
+  padding: 0; 
+  list-style-type: disc;
 }
 
 .resume-container ul li {
   font-size: 16px;
-  line-height: 1.6; /* Spacing between lines for readability */
+  line-height: 1.6; 
   color: #666;
-  margin-bottom: 8px; /* Space between each bullet point */
+  margin-bottom: 8px; 
 }
 
-/* Optional: Section Spacing */
 .resume-section {
-  margin-bottom: 25px; /* Adds spacing between each resume section */
+  margin-bottom: 25px; 
 }
 
 .close {
