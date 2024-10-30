@@ -82,12 +82,17 @@ viewMoreButtons.forEach(button => {
           modalContent.innerHTML = '';
           modalContent.classList.add('report-visual');
           modalContent.innerHTML = `
+            <div class="loader-container">
+              <div class="loading-spinner"></div>
+            </div>
             <iframe src="files/flight_delays_project.html" 
-                    style="width: 100%; height: 85vh; border: none;">
+                    style="width: 100%; height: 85vh; border: none; display: none;"
+                    onload="this.style.display='block'; document.querySelector('.loader-container').style.display='none';">
             </iframe>
           `;
           modal.style.display = 'flex';
           break;
+          
           
 		  
         case 'olympics':
