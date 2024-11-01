@@ -20,7 +20,22 @@ document.querySelectorAll('.filter-skill').forEach(skill => {
   });
 });
 
-// Modal functionality
+let currentSlideIndex = 0;
+
+function changeSlide(n) {
+  showSlide(currentSlideIndex += n);
+}
+
+function showSlide(n) {
+  const slides = document.querySelectorAll('.slideshow-container .slide');
+  if (n >= slides.length) currentSlideIndex = 0; // Wrap to the first slide
+  if (n < 0) currentSlideIndex = slides.length - 1; // Wrap to the last slide
+  slides.forEach((slide, index) => {
+    slide.style.display = index === currentSlideIndex ? 'block' : 'none';
+  });
+}
+
+// Modal 
 const modal = document.querySelector('.modal');
 const modalContent = document.getElementById('modal-body');
 const closeBtn = document.querySelector('.close');
@@ -33,8 +48,7 @@ viewMoreButtons.forEach(button => {
 
     // Clear previous content and reset modal content class
     modalContent.innerHTML = '';
-    modalContent.classList.remove('pdf-viewer'); // Remove PDF-specific styling
-
+    modalContent.classList.remove('pdf-viewer'); 
     if (pdfPath) {
       // Display PDF content with wider modal
       modalContent.classList.add('pdf-viewer');
@@ -45,14 +59,7 @@ viewMoreButtons.forEach(button => {
       iframe.style.border = 'none';
       modalContent.appendChild(iframe);
     } else {
-      // Load specific content based on project
       switch (project) {
-        case 'coralsense':
-          modalContent.innerHTML = `
-            <img src="images/coral_no_background.png" alt="Detailed Project Image">
-            <p>This project is ongoing, but I'd be happy to discuss progress and details with anyone interested. I plan on adding a link to our website once it goes live.</p>
-          `;
-          break;
 
         case 'med-abbrev-mystery':
           modalContent.innerHTML = `
@@ -121,7 +128,71 @@ viewMoreButtons.forEach(button => {
               modal.style.display = 'flex';
               break;
 
-    
+          case 'coralsense':
+            modalContent.innerHTML = '';
+              
+            currentSlideIndex = 0;
+              
+            modalContent.innerHTML = `
+            <div class="modal-content slideshow-visual">
+              <div class="slideshow-container">
+                <div class="slide" style="display: block;">
+                  <img src="coral_presentation/Slide1.png" alt="Slide 1" class="slide-image">
+                </div>
+                <div class="slide fade">
+                  <img src="coral_presentation/Slide2.png" alt="Slide 2" class="slide-image">
+                </div>
+                <div class="slide">
+                  <img src="coral_presentation/Slide3.png" alt="Slide 3" class="slide-image">
+                </div>
+                <div class="slide">
+                  <img src="coral_presentation/Slide4.png" alt="Slide 4" class="slide-image">
+                </div>
+                <div class="slide">
+                  <img src="coral_presentation/Slide5.png" alt="Slide 5" class="slide-image">
+                </div>
+                <div class="slide">
+                  <img src="coral_presentation/Slide6.png" alt="Slide 6" class="slide-image">
+                </div>
+                <div class="slide">
+                  <img src="coral_presentation/Slide7.png" alt="Slide 7" class="slide-image">
+                </div>
+                <div class="slide">
+                  <img src="coral_presentation/Slide8.png" alt="Slide 8" class="slide-image">
+                </div>
+                <div class="slide">
+                  <img src="coral_presentation/Slide9.png" alt="Slide 9" class="slide-image">
+                </div>
+                <div class="slide">
+                  <img src="coral_presentation/Slide10.png" alt="Slide 10" class="slide-image">
+                </div>
+                <div class="slide">
+                  <img src="coral_presentation/Slide11.png" alt="Slide 11" class="slide-image">
+                </div>
+                <div class="slide">
+                  <img src="coral_presentation/Slide12.png" alt="Slide 12" class="slide-image">
+                </div>
+                <div class="slide">
+                  <img src="coral_presentation/Slide13.png" alt="Slide 13" class="slide-image">
+                </div>
+                <div class="slide">
+                  <img src="coral_presentation/Slide14.png" alt="Slide 14" class="slide-image">
+                </div>
+                <div class="slide">
+                  <img src="coral_presentation/Slide15.png" alt="Slide 15" class="slide-image">
+                </div>
+                <!-- Navigation Buttons -->
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+              </div>
+                
+            </div>
+            
+            `;
+            showSlide(0);  
+            modal.style.display = 'flex';
+            break;
+              
 		  
 
         default:
@@ -129,17 +200,14 @@ viewMoreButtons.forEach(button => {
       }
     }
 
-	// Show the modal
 	    modal.style.display = 'flex';
 	  });
 	});
 
-	// Close modal when close button is clicked
 	closeBtn.addEventListener('click', (e) => {
 	  modal.style.display = 'none';
 	});
 
-	// Close modal when clicking outside of it
 	window.addEventListener('click', (e) => {
 	  if (e.target == modal) {
 	    modal.style.display = 'none';
