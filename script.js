@@ -173,13 +173,10 @@ viewMoreButtons.forEach(button => {
                   <img src="coral_presentation/Slide12.png" alt="Slide 12" class="slide-image">
                 </div>
                 <div class="slide">
-                  <img src="coral_presentation/Slide13.png" alt="Slide 13" class="slide-image">
+                  <img src="coral_presentation/Slide14.png" alt="Slide 13" class="slide-image">
                 </div>
                 <div class="slide">
-                  <img src="coral_presentation/Slide14.png" alt="Slide 14" class="slide-image">
-                </div>
-                <div class="slide">
-                  <img src="coral_presentation/Slide15.png" alt="Slide 15" class="slide-image">
+                  <img src="coral_presentation/Slide15.png" alt="Slide 14" class="slide-image">
                 </div>
                 <!-- Navigation Buttons -->
                 <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
