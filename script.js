@@ -1,20 +1,20 @@
-// Skill filtering logic
+// skill filtering 
 document.querySelectorAll('.filter-skill').forEach(skill => {
   skill.addEventListener('click', () => {
     skill.classList.toggle('selected'); // Toggle selected class
 
-    // Gather all selected skills
+    // selected skills
     const selectedSkills = Array.from(document.querySelectorAll('.filter-skill.selected'))
       .map(skill => skill.textContent.trim());
 
-    // Show or hide each project card based on selected skills
+    // show or hide each project card based on selected skills
     document.querySelectorAll('.project-card').forEach(card => {
       const projectSkills = card.dataset.skill.split(",").map(s => s.trim());
       const matchesAllSkills = selectedSkills.every(selectedSkill => 
         projectSkills.includes(selectedSkill)
       );
 
-      // Display only if project matches all selected skills, or show all if none selected
+      // display only if project matches all selected skills, or shows all if none selected
       card.style.display = matchesAllSkills || selectedSkills.length === 0 ? 'block' : 'none';
     });
   });
@@ -46,11 +46,10 @@ viewMoreButtons.forEach(button => {
     const project = button.getAttribute('data-project');
     const pdfPath = button.getAttribute('data-pdf');
 
-    // Clear previous content and reset modal content class
     modalContent.innerHTML = '';
     modalContent.classList.remove('pdf-viewer'); 
     if (pdfPath) {
-      // Display PDF content with wider modal
+      // display PDF content
       modalContent.classList.add('pdf-viewer');
       const iframe = document.createElement('iframe');
       iframe.src = pdfPath;
@@ -66,6 +65,12 @@ viewMoreButtons.forEach(button => {
             <img src="images/med-abbrev-mystery_image.png" alt="Project Image">
             <h2>Med-Abbrev-Mystery</h2>
             <p><b>Abstract:</b> Electronic Health Records (EHRs) are a critical data source for Natural Language Processing (NLP) applications in healthcare. Despite their utility, the widespread use of abbreviations in EHRs can lead to misinterpretations and reduced clarity, posing challenges for clinical decision making. This study aims to improve the interpretation of medical abbreviations in clinical texts by fine-tuning Bidirectional Encoder Representations from Transformers (BERT) models using the Medical Dataset for Abbreviation Disambiguation for Natural Language Understanding (MeDAL), crafted by Wen et al. (2020) containing 5,886 abbreviations with approximately 4 expansions on average for each. The abbreviations come from 14,393,619 medical abstracts on PubMed. The fine-tuned BERT models were applied to two medical tasks: mortality prediction and diagnosis prediction. We hypothesize that fine-tuning on medical abbre- viations will enhance the models’ ability to process clinical text and improve task performance, and that performance improvements can be ob- tained by fine-tuning Large Language Models (LLMs) on the abbreviation disambiguation task. Results were mixed with some indication that fine-tuning BERT models on abbreviation disambiguation does offer modest performance improvements on downstream mortality and diagnosis prediction tasks in line with those observed in Wen et al. (2020) but we ultimately conclude that there is more exploration which can be done in fine-tuning BERT models on medical abbreviations to improve downstream task performance.</p>
+          `;
+          break;
+
+          case 'coralsense2':
+          modalContent.innerHTML = `
+            <h2>Viewing site in new tab.</h2>
           `;
           break;
 

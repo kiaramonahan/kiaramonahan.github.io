@@ -45,6 +45,8 @@
 		  <span class="filter-skill">data visualization</span>
 		  <span class="filter-skill">machine learning</span>
 		  <span class="filter-skill">Tableau</span>
+		  <span class="filter-skill">JavaScript</span>
+		  <span class="filter-skill">React</span>
 		  <span class="filter-skill">Excel</span>
 		  <span class="filter-skill">PySpark</span>
 		  <span class="filter-skill">natural language processing</span>
@@ -56,11 +58,12 @@
       </div>
 
       <div class="project-list">
-        <div class="project-card" data-skill="Python, data wrangling, data analysis, data visualization, machine learning, environmental data, SQL">
+        <div class="project-card" data-skill="Python, data wrangling, data analysis, data visualization, machine learning, environmental data, SQL, JavaScript, React">
           <img src="images/coralsense.png" alt="Project Image">
           <h2>CoralSense</h2>
           <p>This project aims to predict future coral reef health globally using machine learning and time series models with the goal to aid conservationists, governments, and raise public awareness. We researched and integrated over 6 environmental, socio-economic, and geospatial datasets, including satellite imagery, utilizing SQL, GeoPandas, and Pandas in Python. We developed a map interface with JavaScript and HTML to display model predictions, and we used React for back-end website creation. We employed AWS for both model training and website hosting. Currently, we are evaluating our models. Click to view a presentation of our current progress!</p>
           <button class="view-more" data-project="coralsense">View Slides</button>
+		  <a href="https://coralsense.vercel.app" target="_blank" class="view-more" data-project="coralsense2">View Website (In Progress)</a>
           <div class="project-skills">
             <span>Python</span>
             <span>data wrangling</span>
@@ -69,10 +72,12 @@
 			<span>machine learning</span>
 			<span>environmental data</span>
 			<span>SQL</span>
+			<span>JavaScript</span>
+			<span>React</span>
           </div>
         </div>
 		
-        <div class="project-card" data-skill="natural language processing, BERT, machine learning, clinical data">
+        <div class="project-card" data-skill="natural language processing, BERT, machine learning, clinical data, data wrangling">
           <img src="images/med-abbrev-mystery.png" alt="Project Image">
           <h2>Med-Abrev-Mystery</h2>
           <p>This project employs a novel BERT-based model structure that extracts and pools hidden state embeddings from specific abbreviation locations within clinical text. We fine-tuned BERT models (Base BERT Cased and MS BERT) on the MeDAL dataset, which contains over 5,800 medical abbreviations and their expansions, to disambiguate abbreviations in Electronic Health Records (EHRs). Then, we applied the fine-tuned models to mortality and diagnosis prediction tasks using the MIMIC-III dataset. Results demonstrated modest performance improvements, showcasing the potential for further exploration of BERT fine-tuning in clinical NLP applications.</p>
@@ -83,6 +88,7 @@
 			<span>natural language processing</span>
 			<span>BERT</span>
 			<span>clinical data</span>
+			<span>data wrangling</span>
           </div>
         </div>
 		
@@ -117,7 +123,7 @@
           </div>
         </div>
 		
-        <div class="project-card" data-skill="Tableau, Python, data wrangling, data visualization">
+        <div class="project-card" data-skill="Tableau, Python, data wrangling, data visualization, data analysis">
           <img src="images/olympics.png" alt="Project Image">
           <h2>2024 Paris Olympics: Do medal counts tell the whole story?</h2>
           <p>As I watched the Olympics this year, I couldn't help but notice that the country medal charts always have large, wealthy countries in the lead. Out of my own curiosity, I created a visual that walks you through more than the simple country rankings. This project involved combining and cleaning several datasets in Python with pandas.</p>
@@ -127,10 +133,11 @@
 			<span>Python</span>
             <span>data wrangling</span>
 			<span>data visualization</span>
+			<span>data analysis</span>
           </div>
         </div>
 		
-        <div class="project-card" data-skill="R, data analysis, data modeling">
+        <div class="project-card" data-skill="R, data analysis, data modeling, data wrangling">
           <img src="images/vinhoverde.png" alt="Project Image">
           <h2>Regression Analysis of Vinho Verde Wine Preferences</h2>
           <p>We build on previous research by using modern statistical methods to explore the relationship between the physicochemical makeup of wines and their taste profiles. We hypothesize that refined regression techniques can yield insights into the subtle interplay of factors that govern consumer preferences, thereby providing actionable guidance for winemakers and marketers alike.</p>
@@ -139,6 +146,7 @@
             <span>R</span>
             <span>data analysis</span>
 			<span>data modeling</span>
+			<span>data wrangling</span>
           </div>
         </div>
 		
@@ -146,7 +154,6 @@
     </section>
   </div>
 
-  <!-- Single Modal Structure -->
   <div class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -155,7 +162,6 @@
         <button id="zoom-out">-</button>
       </div>
       <div id="modal-body">
-        <!-- Content will be added dynamically by JavaScript -->
       </div>
     </div>
   </div>
