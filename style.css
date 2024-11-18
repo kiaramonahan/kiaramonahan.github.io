@@ -302,6 +302,7 @@ nav {
   margin-top: 10px;
   text-decoration: none;
   display: inline-block;
+  position: relative;
 }
 
 .view-more:hover {
