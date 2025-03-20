@@ -62,8 +62,8 @@
         <div class="project-card" data-skill="Python, data wrangling, data analysis, data visualization, machine learning, environmental data, SQL, JavaScript, React, HTML">
           <img src="images/coralsense.png" alt="Project Image">
           <h2>CoralSense</h2>
-          <p>I led this end-to-end project to model global coral reef health, addressing the urgent threat of reef degradation due to climate change, pollution, and overfishing. By integrating six diverse datasets—including satellite imagery, socioeconomic data, and marine biodiversity indicators—using Python (SQL, GeoPandas, Pandas), I engineered features and prepared data for advanced analysis. I designed and built a dynamic interactive map with Mapbox, React, JavaScript, and HTML to visualize predictions and enable scenario testing. Through robust machine learning models testing, our best random forest model achieved an F1 score of 0.89 in predicting severe coral bleaching, providing actionable insights to aid conservation and policymaking. Click to view my interactive site!</p>
-		  <a href="https://coralsense.vercel.app" target="_blank" class="view-more" data-project="coralsense2">View Site (In Progress)</a>
+          <p>I led this end-to-end project to model global coral reef health, addressing the urgent threat of reef degradation due to climate change, pollution, and overfishing. By integrating six diverse datasets—including satellite imagery, socioeconomic data, and marine biodiversity indicators—using Python (SQL, GeoPandas, Pandas), I engineered features and prepared data for advanced analysis. I designed and built a dynamic interactive map with Mapbox, React, JavaScript, and HTML to visualize predictions and enable scenario testing. Through robust machine learning models testing, our best random forest model achieved an F1 score of 0.84 in predicting severe coral bleaching, providing actionable insights to aid conservation and policymaking. Click to view my interactive site!</p>
+		  <a href="https://coralsense.vercel.app" target="_blank" class="view-more" data-project="coralsense2">View Site</a>
           <div class="project-skills">
             <span>Python</span>
             <span>data wrangling</span>
@@ -78,7 +78,21 @@
           </div>
         </div>
 		
-        <div class="project-card" data-skill="natural language processing, BERT, machine learning, clinical data, data wrangling">
+        <div class="project-card" data-skill="R, data analysis, data visualization, data wrangling">
+          <img src="images/liana.png" alt="Project Image">
+          <h2>Exploring Tumor Microenvironment Interactions: Tools and Workflows for ER+ Breast Cancer</h2>
+          <p>Our project aims to develop a streamlined workflow to implement existing cell-cell communication (CCC) inference methods on single-cell RNA-seq data. We use data from ER+ breast cancer tissues specifically examining interactions between tumor cells and fibroblasts to model these analyses and develop our workflows. We have developed streamlined workflows for these analyses that can be applied to other datasets, cell types, and conditions of interest. By altering a YAML, users will be able to easily conduct complete analyses and generate HTML output files using our .rmd files. This simplifies the analysis process and will allow researchers to spend less time learning, writing, and editing code.
+</p>
+		  <button class="view-more" data-project="liana" data-pdf="files/c_c_poster.pdf">View Poster</button>
+          <div class="project-skills">
+            <span>R</span>
+            <span>data wrangling</span>
+			<span>data analysis</span>
+			<span>data visualization</span>
+          </div>
+        </div>
+		
+        <div class="project-card" data-skill="Python, machine learning, natural language processing, BERT, clinical data, data wrangling">
           <img src="images/med-abbrev-mystery.png" alt="Project Image">
           <h2>Med-Abrev-Mystery</h2>
           <p>This project employs a novel BERT-based model structure that extracts and pools hidden state embeddings from specific abbreviation locations within clinical text. We fine-tuned BERT models (Base BERT Cased and MS BERT) on the MeDAL dataset, which contains over 5,800 medical abbreviations and their expansions, to disambiguate abbreviations in Electronic Health Records (EHRs). Then, we applied the fine-tuned models to mortality and diagnosis prediction tasks using the MIMIC-III dataset. Results demonstrated modest performance improvements, showcasing the potential for further exploration of BERT fine-tuning in clinical NLP applications.</p>

@@ -90,6 +90,14 @@ viewMoreButtons.forEach(button => {
           `;
           break;
 
+          case 'liana':
+            modalContent.innerHTML = `
+              <img src="liana.png" alt="Project Image">
+              <h2>Exploring Tumor Microenvironment Interactions: Tools and Workflows for ER+ Breast Cancer</h2>
+              <p></p>
+            `;
+            break;
+
         case 'flight_delays':
           modalContent.innerHTML = '';
           modalContent.classList.add('report-visual');
